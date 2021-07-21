@@ -1,0 +1,3 @@
+<items gfxroot="gfx/items/" version="1">
+    <active description="Stores lockpicks" gfx="JailCake.png" maxcharges="5" name="Jail Cake" />
+</items>
