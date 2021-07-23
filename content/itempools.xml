@@ -1,5 +1,8 @@
 <ItemPools>
 	<Pool Name="shop">
 		<Item Name="Jail Cake" Weight="1" DecreaseBy="0.5" RemoveOn="0.1"/>
-    </Pool>
+	</Pool>
+	<Pool Name="curse">
+		<Item Name="Slime of a Master" Weight="1" DecreaseBy="0.5" RemoveOn="0.1"/>
+	</Pool>
 </ItemPools>
