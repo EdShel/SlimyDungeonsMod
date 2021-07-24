@@ -11,7 +11,7 @@ function IsAnyPlayerHasItem(collectibleType)
     return false
 end
 
-function IsQuestItem(collectibleId) 
+function IsQuestItem(collectibleId)
     return collectibleId == 327 -- The Polaroid
         or collectibleId == 328 -- The Negative
         or collectibleId == 238 -- Key piece #1
@@ -49,4 +49,25 @@ function ToArray(iterator)
         i = i + 1
     end
     return array
+end
+
+function GetTimeSeconds()
+    return math.floor(game.TimeCounter / 30)
+end
+
+function SpawnItemFromPool(position, rng, distance)
+    local room = game:GetRoom()
+    local roomType = room:GetType()
+    local itemPool = game:GetItemPool()
+    local poolType = itemPool:GetPoolForRoom(roomType, rng:RandomInt(1000))
+    local collectibleId = itemPool:GetCollectible(poolType, true, rng:RandomInt(1000))
+    
+    local positionForItem = room:FindFreePickupSpawnPosition(position, 1, distance)
+    Isaac.Spawn(EntityType.ENTITY_PICKUP, PickupVariant.PICKUP_COLLECTIBLE, collectibleId,
+        positionForItem, Vector(0, 0), nil)
+end
+
+function IsPlayerHasExplosionImmunity(player)
+    return player:HasCollectible(223) -- Pyromaniac
+        or player:HasCollectible(375) -- Host hat
 end

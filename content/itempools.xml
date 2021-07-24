@@ -5,4 +5,7 @@
 	<Pool Name="curse">
 		<Item Name="Slime of a Master" Weight="1" DecreaseBy="0.5" RemoveOn="0.1"/>
 	</Pool>
+	<Pool Name="bombBum">
+		<Item Name="Bomb 'SOS'" Weight="1" DecreaseBy="0.5" RemoveOn="0.1"/>
+	</Pool>
 </ItemPools>

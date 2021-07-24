@@ -1,4 +1,5 @@
 <items gfxroot="gfx/items/" version="1">
     <active name="Jail Cake" description="Stores lockpicks" gfx="JailCake.png" maxcharges="5" />
     <passive name="Slime of a Master" description="Indicates mastery of a stage" gfx="MasterSlime.png" cache="" />
+    <passive name="Bomb 'SOS'" description="The timer starts" gfx="SosBomb.png" cache="speed" />
 </items>
